@@ -13,7 +13,7 @@ console.log("--Verificar si una palabra o frase el palindromo--")
 rl.question('Ingresa una palabra o frase: ', (palabra) => {
     const entradaFiltrada = palabra.replace(/[^a-z0-9]/gi, '').toLowerCase();
     const entradaInvertida = entradaFiltrada.split('').reverse().join('');
-    const esPalidormo = entradaFiltrada === entradaInvertida;
-    console.log(`La entrada "${palabra}" ${esPalidormo ? 'es' : 'no es'} un palíndromo.`);
+    const esPalindromo = entradaFiltrada === entradaInvertida;
+    console.log(`La entrada "${palabra}" ${esPalindromo ? 'es' : 'no es'} un palíndromo.`);
     rl.close();
 });
