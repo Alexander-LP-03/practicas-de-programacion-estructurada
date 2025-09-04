@@ -17,3 +17,4 @@ rl.question('Ingresa una palabra o frase: ', (palabra) => {
     console.log(`La entrada "${palabra}" ${esPalindromo ? 'es' : 'no es'} un palíndromo.`);
     rl.close();
 });
+ 
