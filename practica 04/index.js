@@ -28,9 +28,13 @@ const inventario ={
         rl.question("Ingresa el nombre del producto: \n", (nombre) => {
         rl.question("Ingresa la cantidad del producto: \n", (cantidad) => {
             rl.question("Ingresa el precio unitario del producto: \n", (precio) => {
+            rl.question("Ingresa el nombre del proveedor: \n", (nombreProveedor) => {
+            rl.question("Ingresa el telefono del proveedor: \n", (telefono) => {
             let id = Math.floor(Math.random()*1000 + 1);
             const stock = parseInt(cantidad);
             const decimalPrecio = parseFloat(precio);
+            const nombreProv = nombreProveedor;
+            const tel = telefono
             if(nombre && !isNaN(stock) && !isNaN(decimalPrecio)){
                 let producto ={
                     id: id,
@@ -38,9 +42,10 @@ const inventario ={
                     cantidad: stock,
                     precio: decimalPrecio,
                     proveedor:{
-                        nombreProveedor: "",
-                        telefono: ""
-                }
+                        nombreProveedor: nombreProv,
+                        telefono: tel 
+                    }
+                };
             this.producto.push(producto)
                 console.log(this.producto)
             }else{
@@ -48,7 +53,9 @@ const inventario ={
             }
             rl.close();
             });
-        });  
+            });
+            });
+        });
         });
     }   
 };
