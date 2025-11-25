@@ -89,7 +89,7 @@ async function jugarPartida(record) {
 
         if (eleccion === "R") {
             rechazos--;
-            console.log(`❗ Rechazo usado. Te quedan ${rechazos}.`);
+            console.log(`Rechazo usado. Te quedan ${rechazos}.`);
             if (rechazos === 0) {
                 console.log("\nPerdiste por agotar los rechazos.");
                 return null;
